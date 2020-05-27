@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type src="js/action.js"></script>
+
   <meta name="viewport" content="width=20%, initial-scale=1">
+  <script src="akan.js"></script>
+     <script src="script.js"></script>
   <style>
   div {
     border-width: medium;
@@ -107,51 +109,34 @@
 
 <h2>CHILDREN'S INFORMATION</h2>
 <p>When one enters the birthdate the information about the child should be produced.</p>
-<div class="container">
+
 
 <p id="Date"></p>
 
-<script>
-function myFunction() calculate_age(dob) {
-  var diff_ms= date.now() -dob.getTime();
-  var age_dt = new date(diff_ms);
-
-     return Math.abs(age_dt.getUTCFull year()- 1980);
-   }
-   console.log(calculate_age(new Date(1981, 2, 4)));
-   console.log(calculate_age(new date (1950, 1, 2)));
-   </script>
-
 <div class="container">
-  <form action="action.js" method="post">
+  <form class="myform" onsubmit="return getAkanName()">
   <select >
      <option value="Male">Male</option>
       <option value="Female">Female</option></br></br>
 <select/>
     <label for="Bdate">Birthdate:</label>
     <input type="date" id="Bdate"><br><br>
-     <button id="mybutton">Submit</button>
-     <script>
-     functon MyButtonClick() {
-        alert("You clicked the button");
-     }
-     var button = document.getElementById("mybutton");
-     button.onclick=MyButtonClick;
-     </script>
-
-</div>
-    <div class="row">
-      <div class="col-1">
-        <label="Birthdate: <input type="date"></label>
+    <input id="get-name" type="submit" name="" value="Generate name">
+            <br><br>
+            </form>
+            <form onsubmit="return clearInput()">
+              <input class="clear" type="Submit" value="clear input">
+            </form>
+            <h4 id = display-name><strong> Akan name will be displayed below</strong></h4>
+            <p id="result">result</p>
+            </div>
 
 
-      </div>
-    </div>
-  </form>
+
 
 </div>
 
-<script source="/js/action.js"></script>
+
 </body>
 
 
